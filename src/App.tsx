@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Table } from "./views/TablePage";
+import { HomePage } from "./views/HomePage";
+import { TeamsPage } from "./views/TeamsPage";
+import NavBar from "./components/navBar/NavBar";
+import { Route, Routes } from "react-router-dom";
+import { TeamInfoPage } from "./views/TeamInfoPage";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar />
       </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="teams" element={<TeamsPage />} />
+        <Route path="table" element={<Table />} />
+        <Route path="/team-profile/:teamId" element={<TeamInfoPage />} />
+      </Routes>
     </div>
   );
 }
-
 export default App;

@@ -1,0 +1,120 @@
+.newsfeed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 640px;
+    margin: auto;
+
+    .articles-container {
+        overflow: auto;
+
+        .articles-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+    }
+}
+
+.article {
+    cursor: pointer;
+    margin: 40px 0;
+    transition: 1s;
+    height: 360px;
+    background-image: url("https://i.guim.co.uk/img/media/d3a38ee967ac688087fbbba6e4c0d3cb93da47ce/55_7_4387_2632/master/4387.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=01b97c8610475105ff7d7f555557c69c");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 6px;
+
+    &:first-child {
+       margin: 0;
+      }
+}
+
+.article:hover {
+    background-size: 110%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main h1 {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, white, transparent) 1;
+    margin: 0 auto 0 1rem;
+    padding: 0.5rem 0;
+}
+
+.main p {
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    padding: 0.75rem 1rem;
+}
+
+.main h1,
+.main p {
+    position: relative;
+    top: 10%;
+}
+
+/* .main::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(transparent, rgb(27, 27, 27), black);
+    z-index: -1;
+    opacity: 0.8;
+} */
+
+.source-link {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 20%;
+    left: 2%;
+}
+
+.info {
+    /* position: relative; */
+    /* top: 12%;
+    left: 10%; */
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+.info i {
+    position: relative;
+    left: 50%;
+    margin: 0 0.75rem;
+}
+
+.info i {
+    color:
+}
+
+.fa-thumbs-up:hover {
+    color: rgb(113, 113, 199);
+}
+
+.fa-share:hover {
+    color: rgb(204, 160, 79);
+}
